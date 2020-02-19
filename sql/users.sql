@@ -1,20 +1,26 @@
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Denis','Bousquet','elisehebert@bouygtel.fr','+33 (0)3 38 65 09 24','^1*RYsB@)p','2020-02-09');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Benjamin','Blot','lejeunefrederic@chevalier.com','+33 (0)2 64 21 42 57','LSU0Xunf*p','2020-02-05');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Maggie','Barbe','hernandezalice@carre.fr','+33 2 23 72 02 00','HfI+_6ZaBz','2020-02-12');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Bernadette','Gilles','antoinetteevrard@voila.fr','+33 (0)8 05 35 44 46','*S1KotC)r2','2020-02-11');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Christiane','Aubry','llanglois@tele2.fr','+33 (0)5 00 65 49 54',')_46vR4wAU','2020-02-15');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Gilbert','Mary','lefebvrediane@bigot.fr','+33 1 16 50 49 65','@d7GJ5xbqH','2020-02-12');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Thibault','Grondin','oguibert@bouvier.org','03 08 67 04 19','_&6)b&YaH6','2020-02-07');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Alain','Huet','laurevoisin@maillet.fr','08 06 21 48 79','s#$0gmVpY@','2020-02-03');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Adrienne','Duval','frederique59@fournier.com','0513358678','Cg!09fIfLq','2020-02-09');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Antoinette','Marie','laportesylvie@voila.fr','06 49 54 81 01','9%1iIr2hkl','2020-02-12');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Nathalie','Gauthier','dguilbert@sfr.fr','+33 (0)3 83 17 14 34','&^&30BeVD+','2020-02-07');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Sylvie','Da Silva','gle-gall@michaud.com','+33 (0)1 84 20 10 59','xImUGob3%4','2020-02-11');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Zoé','Dupuis','ulegrand@club-internet.fr','+33 (0)6 89 56 50 39','(D!UA4Vjqb','2020-02-03');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Bernadette','Chretien','mblanc@hernandez.fr','+33 (0)3 70 49 05 70','62CeC10p)T','2020-02-13');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Denis','Blanchet','raymond04@colas.net','08 07 33 91 27','WmUeyaj!!4','2020-02-05');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Bertrand','Duval','chretienjosephine@meyer.com','04 79 97 03 86','%)Y8WV1joE','2020-02-12');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Susan','Marion','emiliegosselin@ifrance.com','08 02 45 97 13','Z49&W4+2%l','2020-02-02');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Marguerite','Pires','colette09@laposte.net','+33 (0)5 01 01 74 56','_nOM0nYo1P','2020-02-11');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Charlotte','Leleu','adrien72@orange.fr','+33 8 02 79 07 17','*QU0ZgHh(t','2020-02-05');
-INSERT INTO user (name, surname, email, phone, password, registerDate) VALUES ('Jérôme','Le Goff','fbigot@club-internet.fr','0314348874','#3QqOONuT#','2020-02-10');
+use mydb;
+SELECT * FROM mydb.User;
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Véronique','Renaud','rene67@voila.fr','06 15 47 82 83','*TJClGFZI5', 1, '1');
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Richard','Bourgeois','emmanuelleschmitt@ifrance.com','+33 (0)1 00 67 55 27','n$7%$55sGN', 1, '2');
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Aimé','Begue','sloiseau@free.fr','0379373002','Mj66LbmD@j', 1, '3');
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Clémence','Etienne','rroux@orange.fr','02 58 94 91 74','NtYc9Oh@f^', 1, '4');
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Richard','Tanguy','uchevalier@launay.fr','+33 3 74 65 63 70','VP)5CIc#vS', 1, '5');
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Nath','Chauvin','pgros@live.com','+33 5 86 57 94 27','_OC5BDYzc6', 1, '6');
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Monique','Humbert','mariebernier@baudry.fr','08 07 13 65 50','(U4NupCln_', 1, '7');
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Maude','Jackie','quenneni@laposte.fr','01 49 68 49 82','aaL8HdjJ%', 1, '8');
+
+
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Employee1','Cashier1','oc_pizza1@oc.fr','01 24 24 24 24','ahQsdkj', 4, '9');
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Employee2','Cashier2','oc_pizza2@oc.fr','01 24 24 24 25','lkqjdqD', 4, '10');
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Employee3','Cashier3','oc_pizza3@oc.fr','01 24 24 24 26','kqjnd)(', 4, '11');
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Employee4','Cashier4','oc_pizza4@oc.fr','01 24 24 24 27','ksdmlk', 4, '12');
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Employee5','Cashier5','oc_pizza5@oc.fr','01 24 24 24 28','WhAtOC', 4, '13');
+
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Admin1','SuperAdmin','admin_pizza5@oc.fr','01 48 49 48 49','seCreT', 2, '9');
+
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Develivery1','Guy','delivery1@oc.fr','01 24 24 24 24','qdqsd', 3, '9');
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Develivery2','Girl','delivery2@oc.fr','01 24 24 24 25','qdazed', 3, '10');
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Develivery3','Guy','delivery2@oc.fr','01 24 24 24 25','kusqsd', 3, '10');
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Develivery4','Guy','delivery3@oc.fr','01 24 24 24 26','pineaA', 3, '11');
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Develivery5','Girl','delivery4@oc.fr','01 24 24 24 27','qdqsd', 3, '12');
+INSERT INTO user (name, surname, email, phone, password, Role_roleId, Adress_idAdress) VALUES ('Develivery6','Girl','delivery5@oc.fr','01 24 24 24 28','qdqsd', 3, '13');

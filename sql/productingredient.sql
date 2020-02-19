@@ -44,3 +44,30 @@ INSERT INTO Product_has_Ingredient (Product_idProduct, Ingredient_idIngredient)
 VALUES ("5", "6");
 INSERT INTO Product_has_Ingredient (Product_idProduct, Ingredient_idIngredient)
 VALUES ("5", "5");
+
+INSERT INTO Product_has_Ingredient (Product_idProduct, Ingredient_idIngredient)
+VALUES ("6", "1");
+INSERT INTO Product_has_Ingredient (Product_idProduct, Ingredient_idIngredient)
+VALUES ("6", "3");
+INSERT INTO Product_has_Ingredient (Product_idProduct, Ingredient_idIngredient)
+VALUES ("6", "4");
+INSERT INTO Product_has_Ingredient (Product_idProduct, Ingredient_idIngredient)
+VALUES ("6", "5");
+INSERT INTO Product_has_Ingredient (Product_idProduct, Ingredient_idIngredient)
+VALUES ("6", "7");
+
+
+INSERT INTO Product_has_Ingredient (Product_idProduct, Ingredient_idIngredient)
+VALUES ("7", "10");
+INSERT INTO Product_has_Ingredient (Product_idProduct, Ingredient_idIngredient)
+VALUES ("8", "11");
+INSERT INTO Product_has_Ingredient (Product_idProduct, Ingredient_idIngredient)
+VALUES ("9", "12");
+INSERT INTO Product_has_Ingredient (Product_idProduct, Ingredient_idIngredient)
+VALUES ("10", "13");
+INSERT INTO Product_has_Ingredient (Product_idProduct, Ingredient_idIngredient)
+VALUES ("11", "14");
+INSERT INTO Product_has_Ingredient (Product_idProduct, Ingredient_idIngredient)
+VALUES ("12", "15");
+INSERT INTO Product_has_Ingredient (Product_idProduct, Ingredient_idIngredient)
+VALUES ("14", "16");
