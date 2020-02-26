@@ -558,6 +558,56 @@ VALUES(`2020-02-19 14:30:02`,`12.00`,`CREDIT CARD`,`16`);
 UPDATE `mydb`.`Order` SET `Status_IdStatus` = '5' WHERE (`idOrder` = '6') and (`User_userId` = '2') and (`User_Role_roleId` = '1') and (`User_Adress_idAdress` = '2') and (`Status_IdStatus` = '1');
 UPDATE `mydb`.`Order` SET `Status_IdStatus` = '5' WHERE (`idOrder` = '7') and (`User_userId` = '8') and (`User_Role_roleId` = '1') and (`User_Adress_idAdress` = '8') and (`Status_IdStatus` = '1');
 
+-- update the quantity needed per ingredient for a product 
+
+ALTER TABLE `mydb`.`Product_has_Ingredient` 
+ADD COLUMN `quantity` DECIMAL(5,3) NOT NULL AFTER `Ingredient_idIngredient`;
+
+-- update quantity requiered per product (pizza, drinks, desserts)
+
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '15.000' WHERE (`Product_idProduct` = '1') and (`Ingredient_idIngredient` = '1');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '10.000' WHERE (`Product_idProduct` = '1') and (`Ingredient_idIngredient` = '3');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '30.000' WHERE (`Product_idProduct` = '1') and (`Ingredient_idIngredient` = '4');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '15.000' WHERE (`Product_idProduct` = '2') and (`Ingredient_idIngredient` = '1');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '10.000' WHERE (`Product_idProduct` = '2') and (`Ingredient_idIngredient` = '3');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '30.000' WHERE (`Product_idProduct` = '2') and (`Ingredient_idIngredient` = '4');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '30.000' WHERE (`Product_idProduct` = '2') and (`Ingredient_idIngredient` = '7');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '15.000' WHERE (`Product_idProduct` = '3') and (`Ingredient_idIngredient` = '2');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '10.000' WHERE (`Product_idProduct` = '3') and (`Ingredient_idIngredient` = '3');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '30.000' WHERE (`Product_idProduct` = '3') and (`Ingredient_idIngredient` = '4');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '30.000' WHERE (`Product_idProduct` = '4') and (`Ingredient_idIngredient` = '4');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '30.000' WHERE (`Product_idProduct` = '5') and (`Ingredient_idIngredient` = '4');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '30.000' WHERE (`Product_idProduct` = '6') and (`Ingredient_idIngredient` = '4');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '30.000' WHERE (`Product_idProduct` = '15') and (`Ingredient_idIngredient` = '4');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '30.000' WHERE (`Product_idProduct` = '16') and (`Ingredient_idIngredient` = '4');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '20.000' WHERE (`Product_idProduct` = '3') and (`Ingredient_idIngredient` = '5');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '20.000' WHERE (`Product_idProduct` = '5') and (`Ingredient_idIngredient` = '5');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '20.000' WHERE (`Product_idProduct` = '6') and (`Ingredient_idIngredient` = '5');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '20.000' WHERE (`Product_idProduct` = '4') and (`Ingredient_idIngredient` = '6');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '20.000' WHERE (`Product_idProduct` = '5') and (`Ingredient_idIngredient` = '6');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '30.000' WHERE (`Product_idProduct` = '6') and (`Ingredient_idIngredient` = '7');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '30.000' WHERE (`Product_idProduct` = '15') and (`Ingredient_idIngredient` = '8');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '30.000' WHERE (`Product_idProduct` = '15') and (`Ingredient_idIngredient` = '9');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '1.000' WHERE (`Product_idProduct` = '7') and (`Ingredient_idIngredient` = '10');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '1.000' WHERE (`Product_idProduct` = '8') and (`Ingredient_idIngredient` = '11');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '1.000' WHERE (`Product_idProduct` = '9') and (`Ingredient_idIngredient` = '12');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '1.000' WHERE (`Product_idProduct` = '10') and (`Ingredient_idIngredient` = '13');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '1.000' WHERE (`Product_idProduct` = '11') and (`Ingredient_idIngredient` = '14');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '1.000' WHERE (`Product_idProduct` = '12') and (`Ingredient_idIngredient` = '15');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '1.000' WHERE (`Product_idProduct` = '14') and (`Ingredient_idIngredient` = '16');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '20.000' WHERE (`Product_idProduct` = '15') and (`Ingredient_idIngredient` = '17');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '20.000' WHERE (`Product_idProduct` = '16') and (`Ingredient_idIngredient` = '17');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '20.000' WHERE (`Product_idProduct` = '16') and (`Ingredient_idIngredient` = '18');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '15.000' WHERE (`Product_idProduct` = '4') and (`Ingredient_idIngredient` = '1');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '15.000' WHERE (`Product_idProduct` = '5') and (`Ingredient_idIngredient` = '1');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '15.000' WHERE (`Product_idProduct` = '6') and (`Ingredient_idIngredient` = '1');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '15.000' WHERE (`Product_idProduct` = '15') and (`Ingredient_idIngredient` = '2');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '15.000' WHERE (`Product_idProduct` = '16') and (`Ingredient_idIngredient` = '2');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '10.000' WHERE (`Product_idProduct` = '4') and (`Ingredient_idIngredient` = '3');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '10.000' WHERE (`Product_idProduct` = '5') and (`Ingredient_idIngredient` = '3');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '10.000' WHERE (`Product_idProduct` = '15') and (`Ingredient_idIngredient` = '3');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '10.000' WHERE (`Product_idProduct` = '6') and (`Ingredient_idIngredient` = '3');
+UPDATE `mydb`.`Product_has_Ingredient` SET `quantity` = '10.000' WHERE (`Product_idProduct` = '16') and (`Ingredient_idIngredient` = '3');
 
 
 
