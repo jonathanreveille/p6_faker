@@ -552,6 +552,11 @@ INSERT INTO `mydb`.`Payment`(`date_time_payment`,`amount_payment`,`type_payment`
 VALUES(`2020-02-19 14:30:02`,`12.00`,`CREDIT CARD`,`16`);
 
 
+-- update status of a couple of order to fully delivered 
+-- we decided to select the first two order that are fully delivered to the client
+
+UPDATE `mydb`.`Order` SET `Status_IdStatus` = '5' WHERE (`idOrder` = '6') and (`User_userId` = '2') and (`User_Role_roleId` = '1') and (`User_Adress_idAdress` = '2') and (`Status_IdStatus` = '1');
+UPDATE `mydb`.`Order` SET `Status_IdStatus` = '5' WHERE (`idOrder` = '7') and (`User_userId` = '8') and (`User_Role_roleId` = '1') and (`User_Adress_idAdress` = '8') and (`Status_IdStatus` = '1');
 
 
 
