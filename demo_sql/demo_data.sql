@@ -101,6 +101,26 @@ LEFT JOIN mydb.Adress
     ON Adress.idAdress = User.Adress_idAdress
 WHERE User.userId = 2;
 
+-- DEMO_6 : J'ai envie de savoir si tout les ingrédients sont
+-- disponibles pour une pizza dans un restaurant sélectionné
+
+SELECT
+Restaurant.restaurant_name,
+Ingredient.name_ingredient,
+Restaurant_has_Ingredient.quantity
+FROM mydb.Restaurant_has_Ingredient
+LEFT JOIN mydb.Product_has_Ingredient
+	ON Product_has_Ingredient.Product_idProduct = Restaurant_has_Ingredient.Ingredient_idIngredient
+LEFT JOIN mydb.Restaurant
+	ON Restaurant.idRestaurant = Restaurant_has_Ingredient.Restaurant_idRestaurant
+LEFT JOIN mydb.Ingredient
+	ON Ingredient.idIngredient = Restaurant_has_Ingredient.Ingredient_idIngredient
+WHERE Restaurant_has_Ingredient.quantity = 0;
+
+
+
+
+
 
 
 
