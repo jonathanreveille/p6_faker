@@ -1,5 +1,5 @@
--- DEMO_0 : J'aimerai afficher toutes les commandes en status "order_is_delivered"
--- et le nom des restaurants concernés
+-- DEMO_1 : J'aimerai afficher toutes les commandes en status "order_is_delivered"
+-- et le nom des restaurants concernés (on change le status pour vérifier les autres)
 
 SELECT Order.idOrder,
 Order.Status_IdStatus,
@@ -14,27 +14,9 @@ LEFT JOIN mydb.Restaurant
 WHERE Status_IdStatus = 5;
 
 
--- DEMO_1 : Je souhaite savoir quel ingrédient à une la quantité 
--- qui est égale à 0 dans un de mes restaurants
-
-SELECT
-Restaurant_has_Ingredient.quantity,
-Ingredient.name_ingredient,
-Restaurant.restaurant_name
-FROM mydb.Restaurant_has_Ingredient
-LEFT JOIN mydb.Restaurant
-	ON Restaurant_has_Ingredient.Restaurant_idRestaurant = idRestaurant
-LEFT JOIN mydb.Ingredient
-	ON Ingredient_idIngredient = idIngredient
-WHERE Restaurant_has_Ingredient.quantity < 300;
-
--- On pourrait ajouter une quantité d'alerte pour recommande du stock d'un ingrédient
--- avec les symboles > ou < ou = par rapport à une quantité déterminée
-
-
 -- DEMO_2 : J'aimerai savoir le détail d'une grosse commande qui vient 
 -- d'arriver (visualiser toute les Orderlines présentent pour 1 commande
--- précise)
+-- précise) - on change le n° de commande pour vérifier les autres cmds.
 
 SELECT Order.idOrder,
 OrderLine.idOrderLine,
@@ -50,36 +32,33 @@ LEFT JOIN mydb.Product
 WHERE Order.idOrder = 15;
 
 
--- DEMO_3 : Je souhaite connaître l'adresse d'un utilisateur (choisir un chiffre des 
--- id utilisateur existant déjà)
-
-SELECT User.userId,
-User.name,
-Adress.idAdress,
+-- DEMO_3 : je souhaite avoir l'adresse du user de la commande X (livreur)
+SELECT Order.idOrder,
 Adress.building_number,
 Adress.street_name,
 Adress.zipcode,
 Adress.floor,
 Adress.digicode,
 Adress.interphone
-FROM mydb.Adress
+FROM mydb.Order
 LEFT JOIN mydb.Adress
-    ON Adress.idAdress = User.Adress_idAdress
-WHERE User.userId = 2;
+    ON Adress.idAdress =  Order.User_Adress_idAdress
+WHERE Order.idOrder = 6;
 
 
--- DEMO_4 : J'ai envie de savoir si tout les ingrédients sont
--- disponibles pour une pizza dans un restaurant sélectionné
+-- DEMO_4 : Je souhaite savoir quel ingrédient à une la quantité 
+-- qui est égale à 0 dans un de mes restaurants (gérant, cuisine)
 
 SELECT
-Restaurant.restaurant_name,
+Restaurant_has_Ingredient.quantity,
 Ingredient.name_ingredient,
-Restaurant_has_Ingredient.quantity
+Restaurant.restaurant_name
 FROM mydb.Restaurant_has_Ingredient
-LEFT JOIN mydb.Product_has_Ingredient
-	ON Product_has_Ingredient.Product_idProduct = Restaurant_has_Ingredient.Ingredient_idIngredient
 LEFT JOIN mydb.Restaurant
-	ON Restaurant.idRestaurant = Restaurant_has_Ingredient.Restaurant_idRestaurant
+	ON Restaurant_has_Ingredient.Restaurant_idRestaurant = idRestaurant
 LEFT JOIN mydb.Ingredient
-	ON Ingredient.idIngredient = Restaurant_has_Ingredient.Ingredient_idIngredient
-WHERE Restaurant_has_Ingredient.quantity = 0;
+	ON Ingredient_idIngredient = idIngredient
+WHERE Restaurant_has_Ingredient.quantity < 300;
+
+-- On pourrait ajouter une quantité d'alerte pour recommande du stock d'un ingrédient
+-- avec les symboles > ou < ou = par rapport à une quantité déterminée
