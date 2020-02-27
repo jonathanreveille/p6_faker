@@ -1,3 +1,5 @@
+-- This file is for the demo with the database
+
 -- DEMO_1 : J'aimerai afficher toutes les commandes en status "order_is_delivered"
 -- et le nom des restaurants concernés (on change le status pour vérifier les autres)
 
